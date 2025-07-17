@@ -1,0 +1,45 @@
+Cavli C10GS
+Type: LTE Cat 1 module with 2G fallback
+
+1. AT+GPSLOC – Get Current GPS Location
+
+Purpose: Retrieves the current GPS location of the device if GNSS is enabled.
+
+Command: 
+
+AT+GPSLOC
+
+Response:
+
++GPSLOC: 28.6129,N,77.2295,E,20250717,145200.00
+OK
+
+2.AT+SIGSTR  – Check Signal Strength in dBm
+
+Purpose: Returns detailed signal strength information (more precise than AT+CSQ).
+
+Command:
+
+AT+SIGSTR
+
+Response:
+
++SIGSTR: -78 dBm, LTE
+OK
+
+Gives actual RSSI in dBm and the current network type (e.g., LTE, 2G).
+
+3. AT+STORMSG  – Store an Incoming SMS to Custom Memory Slot
+
+Purpose: Stores the latest received SMS into a specified custom memory index for future processing or backup.
+
+Command:
+
+AT+STORMSG=5
+
+Response:
+
++STORMSG: Message stored at index 5
+OK
+
+Stores the last unread SMS message into a custom memory slot 5
