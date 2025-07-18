@@ -1,0 +1,26 @@
+; Tera Term Macro Script - AT COMMANDS TEST
+; Sends AT, AT+CSQ, AT+CREG? sequentially
+
+; Step 1: Open Serial Port COM15 with 115200 baud
+connect '/C=15 /BAUD=115200'
+
+; Step 2: Send AT command
+sendln 'AT'
+wait 'OK'
+
+; Step 3: Send Signal Quality command
+sendln 'AT+CSQ'
+wait 'OK'
+
+; Step 4: Send Network Registration Query
+sendln 'AT+CREG?'
+wait 'OK'
+
+; Step 5: Pause for 2 seconds (2000 ms)
+pause 2000
+
+; Step 6: Display completion message
+messagebox 'AT Test Sequence Completed!' 'Tera Term Script'
+
+; Step 7: Close Tera Term
+closett
